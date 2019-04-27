@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_saveSettings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_calculator"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens_10dp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_5dp"
+        android:background="@drawable/shape_calculator"
+        android:gravity="center"
+        android:padding="@dimen/dimens_5dp"
+        android:text="Visibility Configuration"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlue1"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_secInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:text="@string/ComputationalInterval"
+        android:layout_marginStart="@dimen/dimens_25dp"
+        android:textColor="@color/colorBlack" />
+
+    <LinearLayout
+        android:id="@+id/ll_secInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_secInterval"
+        android:layout_marginTop="@dimen/dimens_5dp"
+        android:layout_marginStart="@dimen/dimens_25dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/et_secInterval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/bg_et_sec"
+            android:inputType="number"
+            android:padding="@dimen/dimens_5dp"
+            android:text="@string/sec60"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            tools:ignore="Autofill">
+
+            <requestFocus />
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sec"
+            android:textColor="@color/colorBlack"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_printORB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_secInterval"
+        android:layout_marginTop="10dp"
+        android:text="Print full resolution orbit"
+        android:layout_marginStart="@dimen/dimens_25dp"
+        android:textColor="@color/colorBlack" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_printORB"
+        android:layout_marginTop="@dimen/dimens_5dp"
+        android:layout_marginStart="@dimen/dimens_25dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/No"
+            android:paddingStart="@dimen/dimens_10dp"
+            android:paddingEnd="@dimen/dimens_10dp"
+            android:layout_weight="0.5"
+            android:textColor="@color/colorBlack"/>
+
+        <RadioButton
+            android:id="@+id/rb_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/Yes"
+            android:checked="false"
+            android:paddingStart="@dimen/dimens_10dp"
+            android:paddingEnd="@dimen/dimens_10dp"
+            android:layout_weight="0.5"
+            android:textColor="@color/colorBlack"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_saveSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:background="@drawable/btn_login"
+        android:text="@string/SaveSettings"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+
